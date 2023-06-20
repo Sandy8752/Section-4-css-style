@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "top-left top-right"
+    "middle middle"
+    "bottom-left bottom-right";
+
+  grid-gap: 8px;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.container > div {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Lato", sans-serif;
+}
+.title {
+  font-weight: 800;
+  color: #4d0099;
+  font-size: 0.8rem;
+}
+.symbol {
+  background-color: rgb(240, 240, 211);
+  padding: 1.5rem;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  color: rgba(230, 174, 20, 0.586);
+}
+.Desc {
+  font-size: 0.7rem;
+  color: gray;
+  font-weight: 600;
+}
+
+.top-left {
+  grid-area: top-left;
+  width: 200px;
+  height: 200px;
+}
+
+.top-right {
+  grid-area: top-right;
+  width: 200px;
+  height: 200px;
+}
+
+.bottom-left {
+  grid-area: bottom-left;
+  width: 200px;
+  height: 200px;
+}
+
+.bottom-right {
+  grid-area: bottom-right;
+  width: 200px;
+  height: 200px;
+}
+
+.middle {
+  grid-area: middle;
+}
+.middleImg {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "middle"
+      "top-left"
+      "top-right"
+      "bottom-left"
+      "bottom-right";
+  }
+}
